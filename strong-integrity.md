@@ -4,7 +4,7 @@ Custom roms have various methods to spoof stuff to play services which allow us 
 ## Requirements
 - Root (KSU/APATCH/MAGISK)
 - Working keybox (unrevoked)
-- Rom supporting props to disable pihooks (AOSPA supports it)
+- Rom supporting props to disable pihooks or PixelPropUtils overlay (AOSPA/YAAP supports it)
 - brian
 - bomb?
 
@@ -21,8 +21,15 @@ setprop persist.sys.pihooks.disable.gms_props true
 ```sh
 setprop persist.sys.pihooks.disable.gms_key_attestation_block true
 ```
+### For YAAP 15+
+You have to additionally disable PixelPropUtils using the command below
+```sh
+cmd overlay disable android.yaap.certifiedprops.overlay
+```
+
 - After a reboot you should be passing strong.
 
 ### NOTE
 - Remember to add your apps in /data/adb/tricky_store/target.txt if they still detect root
 - Additionally some apps check for weird dirs such as TWRP or manager apps like KernelSU or apatch ( Keep that in mind )
+- To revert this set the props you set to false to true, For YAAP enable the overlay again using the command ( by replacing disable with enable DUH )
