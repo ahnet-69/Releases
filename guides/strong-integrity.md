@@ -22,14 +22,17 @@ setprop persist.sys.pihooks.disable.gms_props true
 setprop persist.sys.pihooks.disable.gms_key_attestation_block true
 ```
 ### For YAAP 15+
-You have to additionally disable PixelPropUtils using the command below
+- To disable YAAP's fingerprint spoofing logic, You can download **[this overlay](https://raw.githubusercontent.com/ahnet-69/Releases/refs/heads/main/files/NoPropsOverlay.apk)** and install it as a normal app. then you can use Trickystore and pif normally.
+- However incase the above APK does not work, Use the command below to disable the overlay completely.
+
 ```sh
 cmd overlay disable android.yaap.certifiedprops.overlay
 ```
+**NOTE: Commands for two props are still required to be set.**
 
 - After a reboot you should be passing strong.
 
 ### NOTE
 - Remember to add your apps in /data/adb/tricky_store/target.txt if they still detect root
 - Additionally some apps check for weird dirs such as TWRP or manager apps like KernelSU or apatch ( Keep that in mind )
-- To revert this set the props you set to false to true, For YAAP enable the overlay again using the command ( by replacing disable with enable DUH )
+- To revert this set the props you set to false to true, For YAAP enable the overlay again using the command ( by replacing disable with enable DUH ) or find the overlay in app settings, click top right 3 dots and click uninstall updates.
