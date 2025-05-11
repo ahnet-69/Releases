@@ -8,7 +8,7 @@ Custom roms have various methods to spoof stuff to play services which allow us 
 - brian
 - bomb?
 
-## Steps
+## For AOSPA or Others
 - Be on the latest Rom build released.
 - Flash The latest [TrickyStore](https://github.com/5ec1cff/TrickyStore) Module in your root manager.
 - Flash The latest [Play Integrity Fix](https://github.com/chiteroman/PlayIntegrityFix) Module in your root manager.
@@ -23,12 +23,11 @@ setprop persist.sys.pihooks.disable.gms_key_attestation_block true
 ```
 ### For YAAP 15+
 - To disable YAAP's fingerprint spoofing logic, You can download **[this overlay](https://raw.githubusercontent.com/ahnet-69/Releases/refs/heads/main/files/NoPropsOverlay.apk)** and install it as a normal app. then you can use Trickystore and pif normally.
-- However incase the above APK does not work, Use the command below to disable the overlay completely.
+- However incase the above APK does not work, Use the command below in **adb shell** to disable the overlay completely.
 
 ```sh
 cmd overlay disable android.yaap.certifiedprops.overlay
 ```
-**NOTE: Commands for two props are still required to be set.**
 
 - After a reboot you should be passing strong.
 
