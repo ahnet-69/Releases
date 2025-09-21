@@ -1,7 +1,7 @@
 ## ROM Releases
 Various roms i build for pdx203/pdx206 are uploaded here. Check them out from **[here](https://github.com/ahnet-69/Releases/releases)**.
 
-Please refer to my telegram channel or XDA for updates on YAAP OFFICIAL.
+Please refer to my telegram channel or XDA for updates on YAAP UNOFFICIAL.
 
 ### Useful Guides
 - **[Lock Bootloader](https://github.com/ahnet-69/Releases/blob/main/guides/bl-lock.md)**
