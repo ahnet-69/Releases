@@ -21,6 +21,9 @@ setprop persist.sys.pihooks.disable.gms_props true
 ```sh
 setprop persist.sys.pihooks.disable.gms_key_attestation_block true
 ```
+### For YAAP 16
+- Disable the option "Spoof certified properties" from Settings > System > Miscellaneous.
+
 ### For YAAP 15+
 - To disable YAAP's fingerprint spoofing logic, You can download **[this overlay](https://raw.githubusercontent.com/ahnet-69/Releases/refs/heads/main/files/NoPropsOverlay.apk)** and install it as a normal app. then you can use Trickystore and pif normally.
 - However incase the above APK does not work, Use the command below in **adb shell** to disable the overlay completely.
